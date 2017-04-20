@@ -415,6 +415,9 @@ void Aimbot::AutoShoot(C_BasePlayer* player, C_BaseCombatWeapon* activeWeapon, C
 {
 	if (!Settings::Aimbot::AutoShoot::enabled)
 		return;
+	
+	if (!inputSystem->IsButtonDown(Settings::Aimbot::aimkey)
+                return;
 
 	if (Settings::Aimbot::AimStep::enabled && Aimbot::aimStepInProgress)
 		return;
